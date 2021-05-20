@@ -1,0 +1,10 @@
+{
+  "name": "100 Race",
+  "id": "976247509603333173",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "relaunchButtons": [
+    {"command": "relaunch", "name" : "Play 100 Race"}
+  ]
+}

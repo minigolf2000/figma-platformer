@@ -1,0 +1,75 @@
+body {
+  font: 22px "Inter", sans-serif;
+  margin: 0;
+}
+
+#ui {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  user-select: none;
+}
+
+#ui:not(:focus) #alive, #ui:not(:focus) svg {
+  opacity: .03;
+}
+
+#alive {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+#alive.dead:not(.last-life) {
+  opacity: .2;
+}
+
+#numLives {
+  margin-right: 20px;
+}
+
+#game-over {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#alive.dead.last-life, #game-over {
+  display: none;
+}
+
+#alive, #alive.dead.last-life + #game-over {
+  display: flex;
+  height: 60px;
+}
+
+#paused {
+  display: none;
+  flex-direction: column;
+  line-height: 1.4em;
+  font-size: 18px;
+  position: absolute;
+  text-align: center;
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%); /* This is a shorthand of
+                                       translateX(-50%) and translateY(-50%) */
+}
+
+#paused #title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#ui:not(:focus) {
+  border: 3px solid #FAA1A1;
+}
+
+#ui:not(:focus) #paused {
+  display: flex;
+}
